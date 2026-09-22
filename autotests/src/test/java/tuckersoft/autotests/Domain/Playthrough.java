@@ -28,7 +28,7 @@ public class Playthrough {
     private User user;
 
     @Column(nullable = false)
-    private String startNodeCode; // no cambia nunca
+    private String startNodeCode;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "current_node_id", nullable = false)
@@ -44,9 +44,9 @@ public class Playthrough {
 
     @Column(nullable = false)
     @Builder.Default
-    private String status = "ACTIVA"; // ACTIVA | FINALIZADA
+    private String status = "ACTIVA";
 
-    private String endingCode; // solo cuando status = FINALIZADA
+    private String endingCode;
 
     @Column(nullable = false, updatable = false)
     private Instant createdAt;

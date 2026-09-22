@@ -26,23 +26,23 @@ public class Decision {
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "node_id", nullable = false)
-    private StoryNode node; // nodo de ORIGEN (currentNode al momento de decidir)
+    private StoryNode node;
 
     @Column(nullable = false, columnDefinition = "TEXT")
     private String rawInput;
 
-    private String branchType;     // OBEDIENCIA | REBELDIA | SOSPECHA | RUPTURA_CUARTA_PARED | ENTRADA_CORRUPTA
+    private String branchType;
 
     @Column(nullable = false)
-    private String impactLevel;    // LEVE | MODERADO | GRAVE | CRITICO (viene en el request)
+    private String impactLevel;
 
-    private String handlerUnit;    // derivado del branchType
-    private String outcomeCode;    // derivado del branchType
+    private String handlerUnit;
+    private String outcomeCode;
 
     private String resolvedNodeCode; // nullable
 
     @Column(nullable = false)
-    private String status; // REGISTRADA | PROCESANDO | ESTABILIZADA | ERROR
+    private String status;
 
     @Column(nullable = false, updatable = false)
     private Instant createdAt;

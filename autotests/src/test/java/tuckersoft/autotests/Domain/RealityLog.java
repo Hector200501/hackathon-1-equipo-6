@@ -28,12 +28,12 @@ public class RealityLog {
     private String subject;
 
     @Column(nullable = false)
-    private String logStatus; // SENT | FAILED
+    private String logStatus;
 
     @Column(columnDefinition = "TEXT")
-    private String errorMessage; // nullable
+    private String errorMessage;
 
-    private Instant sentAt; // nullable, solo si logStatus = SENT
+    private Instant sentAt;
 
     @Column(nullable = false, updatable = false)
     private Instant createdAt;

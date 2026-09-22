@@ -25,13 +25,13 @@ public class User {
     private String email;
 
     @Column(nullable = false)
-    private String password; // BCrypt, nunca texto plano
+    private String password;
 
     @Column(nullable = false, length = 60)
     private String displayName;
 
     @Column(nullable = false)
-    private String role; // ROLE_USER | ROLE_ADMIN
+    private String role;
 
     @Column(nullable = false, updatable = false)
     private Instant createdAt;

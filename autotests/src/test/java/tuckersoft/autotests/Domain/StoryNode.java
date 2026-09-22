@@ -36,7 +36,6 @@ public class StoryNode {
     @Builder.Default
     private Integer currentBranches = 0;
 
-    // Strings, NO llaves foraneas: se resuelven al decidir, no al crear.
     private String primaryBranchCode;
 
     private String glitchBranchCode;
